@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "start_ampm_strings">
+        <item>A.M.</item>
+        <item>P.M.</item>
+    </string-array>
+</resources>

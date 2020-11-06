@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "service_length_strings">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+        <item>1 hour</item>
+        <item>1 hour and 15 minutes</item>
+        <item>1 hour and 30 minutes</item>
+        <item>1 hour and 45 minutes</item>
+        <item>2 hours</item>
+        <item>2 hours and 30 minutes</item>
+        <item>3 hours</item>
+        <item>4 hours</item>
+        <item>5 hours</item>
+        <item>6 hours</item>
+        <item>7 hours</item>
+        <item>8 hours</item>
+    </string-array>
+</resources>
