@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A070BA">
 
     <LinearLayout
+        android:id="@+id/CenterScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
@@ -35,7 +38,8 @@
                 android:layout_marginEnd="17dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Minimum Bid" />
+                android:text="Minimum Bid"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -65,7 +69,8 @@
                 android:layout_marginEnd="17dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Service Length" />
+                android:text="Service Length"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -95,7 +100,8 @@
                 android:layout_marginEnd="17dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Start Time" />
+                android:text="Start Time"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -154,7 +160,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Time to Bid" />
+                android:text="Time to Bid"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -184,7 +191,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Accepted Genders" />
+                android:text="Accepted Genders"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -214,7 +222,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Maximum Distance" />
+                android:text="Maximum Distance"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
@@ -245,7 +254,8 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Location" />
+                android:text="Location"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
@@ -263,6 +273,7 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginBottom="0dp"
                 android:hint="enter zip if not using ucrrent location"
+                android:textColor="#FFFFFF"
                 android:textSize="10sp" />
 
             <TextView
@@ -275,7 +286,8 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
-                android:text="Zip" />
+                android:text="Zip"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
     </LinearLayout>
@@ -287,7 +299,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="88dp"
-        android:text="Offer Cuddling Services" />
+        android:text="Offer Cuddling Services"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/makeofferbutton"

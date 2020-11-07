@@ -4,21 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A070BA"
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log in"
-        android:id="@+id/login"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:text="Log in" />
 
     <Button
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:id="@+id/signup"
+        android:layout_below="@id/login"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/login" />
+        android:text="Register" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="139dp"
+        android:fontFamily="sans-serif"
+        android:text="CDLR"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="244dp"
+        android:text="get comfy"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="italic" />
 
 </RelativeLayout>

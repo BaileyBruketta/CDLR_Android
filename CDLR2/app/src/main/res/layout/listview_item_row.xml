@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#00FFFFFF"
     android:padding="10dp">
 
     <ImageView
@@ -20,14 +21,16 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:background="#00FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/pricing"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Current Bid: $55.5" />
+            android:text="Current Bid: $55.5"
+            android:textColor="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,14 +42,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Your Place" />
+                android:text="Your Place"
+                android:textColor="#FFFFFF" />
 
             <CheckBox
                 android:id="@+id/HotelCheckbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Hotel" />
+                android:text="Hotel"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -58,7 +63,8 @@
                 android:id="@+id/TimeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Length: 1 hour " />
+                android:text="Length: 1 hour "
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/timeFrame"
@@ -66,14 +72,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingLeft="10dp"
-                android:text="00:00 p.m. - 00:00 p.m." />
+                android:text="00:00 p.m. - 00:00 p.m."
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/BidTimeLeftText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Time left to bid: 15 minutes" />
+            android:text="Time left to bid: 15 minutes"
+            android:textColor="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,14 +93,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="35dp"
-                android:text="bidders: 5" />
+                android:text="bidders: 5"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/RatingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Rating: 95%" />
+                android:text="Rating: 95%"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -105,15 +115,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/pricing"
-                android:text="Name" />
+                android:text="Name"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/vieworbidbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_weight="1"
-                android:text="View / Bid"
-                android:onClick="myClickHandlerViewOrBid"/>
+                android:onClick="myClickHandlerViewOrBid"
+                android:text="View / Bid" />
         </LinearLayout>
 
     </LinearLayout>
