@@ -23,17 +23,25 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import android.content.Intent;
+import com.google.android.gms.tasks.OnCompleteListener;
+import android.widget.AdapterView.OnItemSelectedListener;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
     private String BASE_URL = "https://rocky-tundra-97832.herokuapp.com/";
-
+    public String birthmonth;
+    public String birthyear;
+    public String birthday;
 
 
     //Post-login-activity
@@ -69,6 +77,51 @@ public class MainActivity extends AppCompatActivity {
                 handleSignupDialogue();
             }
         });
+
+        birthmonth = "0";
+        birthyear = "0";
+        birthday = "0";
+
+        Spinner yearspinner = (Spinner) findViewById(R.id.birthyearspinner);
+        ArrayAdapter<CharSequence> yearadapter = ArrayAdapter.createFromResource(this, R.array.birthyear_select_strings, android.R.layout.simple_spinner_item);
+        yearadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        yearspinner.setAdapter(yearadapter);
+        yearspinner.setOnItemSelectedListener(this);
+
+        Spinner monthspinner = (Spinner) findViewById(R.id.monthspinner);
+        ArrayAdapter<CharSequence> monthadapter = ArrayAdapter.createFromResource(this, R.array.birthmonth_select_strings, android.R.layout.simple_spinner_item);
+        monthadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        monthspinner.setAdapter(monthadapter);
+        monthspinner.setOnItemSelectedListener(this);
+
+        Spinner dayspinner = (Spinner) findViewById(R.id.dayspinner);
+        ArrayAdapter<CharSequence> dayadapter = ArrayAdapter.createFromResource(this, R.array.birthdate_select_strings, android.R.layout.simple_spinner_item);
+        dayadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dayspinner.setAdapter(dayadapter);
+        dayspinner.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
+        int IndexOfSelection;
+        switch(parent.getId()){
+            case R.id.birthyearspinner :
+                birthyear = parent.getItemAtPosition(pos).toString();
+                break;
+
+            case R.id.monthspinner :
+                birthmonth = parent.getItemAtPosition(pos).toString();
+                break;
+
+            case R.id.dayspinner :
+                birthday = parent.getItemAtPosition(pos).toString();
+                break;
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
 
@@ -158,16 +211,24 @@ public class MainActivity extends AppCompatActivity {
         final EditText lastNameEdit = view.findViewById(R.id.lastNameEdit);
         final EditText emailEdit = view.findViewById(R.id.emailEdit);
         final EditText passwordEdit = view.findViewById(R.id.passwordEdit);
+        final EditText ZipEdit = view.findViewById(R.id.zipEdit);
+        final EditText ConfirmPassword = view.findViewById(R.id.passwordEdit2);
 
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 HashMap<String, String> map = new HashMap<>();
-                String FnLn = firstNameEdit.getText().toString() + " " + lastNameEdit.getText().toString();
-                map.put("name", FnLn);
+
+                map.put("firstname", firstNameEdit.getText().toString());
+                map.put("lastname", lastNameEdit.getText().toString());
+                map.put("zipcode", ZipEdit.getText().toString());
+                map.put("birthmonth", birthmonth);
+                map.put("birthday", birthday);
+                map.put("birthyear", birthyear);
                 map.put("email", emailEdit.getText().toString());
                 map.put("password", passwordEdit.getText().toString());
+                map.put("confirmpassword",ConfirmPassword.getText().toString());
 
                 Call<Void> call = retrofitInterface.executeSignup(map);
 
